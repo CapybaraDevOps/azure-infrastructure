@@ -9,3 +9,8 @@ variable "region" {
   description = "region"
   default = "West Europe"
 }
+
+variable "project" {
+  type        = string
+  description = "region"
+}

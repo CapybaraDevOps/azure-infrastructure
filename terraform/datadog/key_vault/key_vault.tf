@@ -49,3 +49,21 @@ resource "azurerm_key_vault_secret" "client_secret" {
   value        = local.secrets.client_secret
   key_vault_id = azurerm_key_vault.datadog_key_vault.id
 }
+
+resource "azurerm_key_vault_secret" "client_secret" {
+  name         = "client-id"
+  value        = local.secrets.client_id
+  key_vault_id = azurerm_key_vault.datadog_key_vault.id
+}
+
+resource "azurerm_key_vault_secret" "access_key" {
+  name         = "access-key"
+  value        = local.secrets.client_id
+  key_vault_id = azurerm_key_vault.datadog_key_vault.id
+}
+
+resource "azurerm_key_vault_secret" "secret_key" {
+  name         = "secret-key"
+  value        = local.secrets.client_id
+  key_vault_id = azurerm_key_vault.datadog_key_vault.id
+}
