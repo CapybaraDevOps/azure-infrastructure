@@ -1,0 +1,27 @@
+global:
+  enabled: true
+  image: hashicorp/consul:1.19.1
+  datacenter: dc1
+  tls:
+    enabled: true
+    enableAutoEncrypt: true
+    verify: true
+  acls:
+    manageSystemACLs: true
+  gossipEncryption:
+    autoGenerate: true
+client:
+  exposeGossipPorts: true
+server:
+  enabled: true
+  replicas: 5
+  exposeGossipAndRPCPorts: true
+  ports:
+    serflan:
+      port: 9301
+ui:
+  enabled: true
+  service:
+    type: LoadBalancer
+connectInject:
+  enabled: true
