@@ -10,15 +10,12 @@ global:
     manageSystemACLs: true
   gossipEncryption:
     autoGenerate: true
-client:
-  exposeGossipPorts: true
 server:
   enabled: true
   replicas: 5
-  exposeGossipAndRPCPorts: true
-  ports:
-    serflan:
-      port: 9301
+  exposeService:
+    enabled: true
+    type: LoadBalancer
 ui:
   enabled: true
   service:
