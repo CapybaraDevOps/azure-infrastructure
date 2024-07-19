@@ -1,0 +1,6 @@
+{
+  "env": "stage-01",
+  "app": "consul",
+  "location": "we",
+  "region": "West Europe"
+}

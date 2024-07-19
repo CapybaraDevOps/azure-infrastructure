@@ -1,0 +1,6 @@
+{
+  "env": "dev-01",
+  "app": "consul",
+  "location": "we",
+  "region": "West US 2"
+}

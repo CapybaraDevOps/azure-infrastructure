@@ -1,0 +1,24 @@
+global:
+  enabled: true
+  image: hashicorp/consul:1.19.1
+  datacenter: dc1
+  tls:
+    enabled: true
+    enableAutoEncrypt: true
+    verify: true
+  acls:
+    manageSystemACLs: true
+  gossipEncryption:
+    autoGenerate: true
+server:
+  enabled: true
+  replicas: 5
+  exposeService:
+    enabled: true
+    type: LoadBalancer
+ui:
+  enabled: true
+  service:
+    type: LoadBalancer
+connectInject:
+  enabled: true
